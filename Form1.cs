@@ -22,9 +22,9 @@ namespace Lab_3
 
         public Form1()
         {
-           
+
             InitializeComponent();
-           
+
         }
 
         public void SetupData()
@@ -48,7 +48,7 @@ namespace Lab_3
             List<string> ra7 = new List<string>() { "Soy", "Fish" };
 
             Recipe r1 = new Recipe("R001", "Chicken pata bake", ra1);
-            Recipe r2 = new Recipe("R002", "Chicken Casserole", ra2); 
+            Recipe r2 = new Recipe("R002", "Chicken Casserole", ra2);
             Recipe r3 = new Recipe("R003", "Burgers", ra3);
             Recipe r4 = new Recipe("R101", "Pork Tacos", ra4);
             Recipe r5 = new Recipe("R099", "Prawn Titka Masala", ra5);
@@ -61,19 +61,19 @@ namespace Lab_3
             SetupDataForRecipeTab();
         }
 
-        
 
-        
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             SetupData();
-        
+
         }
 
         private void SetupDataForAllergensTab()
         {
-            
-            foreach (Allergens a in ListAllergens)
+
+            foreach(Allergens a in ListAllergens)
             {
                 listView1.Items.Add(new ListViewItem(new string[] { a.Code, a.Name }));
             }
@@ -81,19 +81,19 @@ namespace Lab_3
 
         private void SetupDataForRecipeTab()
         {
-           
-            foreach (Recipe r in recipeCollection)
+
+            foreach(Recipe r in recipeCollection)
             {
                 string allergies = string.Join(",", r.recipeBookAllergens);
                 listView2.Items.Add(new ListViewItem(new string[] { r.recipeBookCode, r.recipeBookName, allergies }));
             }
         }
 
-        
+
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (ListViewItem x in listView1.SelectedItems)
+            foreach(ListViewItem x in listView1.SelectedItems)
             {
                 this.txtAllergensCode.Text = x.SubItems[0].Text;
                 this.txtAllergensName.Text = x.SubItems[1].Text;
@@ -102,7 +102,7 @@ namespace Lab_3
 
         private void btnAllergensEdit_Click(object sender, EventArgs e)
         {
-            if (btnAllergensEdit.Text == "Edit")
+            if(btnAllergensEdit.Text == "Edit")
             {
                 btnAllergensEdit.Text = "Save";
                 this.txtAllergensCode.Enabled = true;
@@ -110,11 +110,12 @@ namespace Lab_3
             }
             else
             {
-                foreach (ListViewItem x in listView1.SelectedItems)
+                foreach(ListViewItem x in listView1.SelectedItems)
                 {
                     ListAllergens.RemoveAt(x.Index);
                     ListAllergens.Add(new Allergens(this.txtAllergensCode.Text, this.txtAllergensCode.Text));
 
+                    //TODO:Task 1 - Bug
                     x.SubItems[0].Text = this.txtAllergensCode.Text;
                     x.SubItems[1].Text = this.txtAllergensCode.Text;
                 }
@@ -126,7 +127,8 @@ namespace Lab_3
 
         private void btnAllergensDelete_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem x in listView1.SelectedItems)
+            //TODO:Task 2
+            foreach(ListViewItem x in listView1.SelectedItems)
             {
                 ListAllergens.RemoveAt(x.Index);
                 listView1.Items.RemoveAt(x.Index);
@@ -138,7 +140,8 @@ namespace Lab_3
 
         private void btnAllergensAdd_Click(object sender, EventArgs e)
         {
-            if (btnAllergensAdd.Text == "Add")
+            //TODO:Task 4
+            if(btnAllergensAdd.Text == "Add")
             {
                 btnAllergensAdd.Text = "Save";
                 this.txtAllergensCode.Text = "";
@@ -161,10 +164,10 @@ namespace Lab_3
             }
         }
 
-       
+
         private void btnRecipeEdit_Click(object sender, EventArgs e)
         {
-            if (btnRecipeEdit.Text == "Edit")
+            if(btnRecipeEdit.Text == "Edit")
             {
                 btnRecipeEdit.Text = "Save";
                 this.txtRecipeCode.Enabled = true;
@@ -173,7 +176,7 @@ namespace Lab_3
             }
             else
             {
-                foreach (ListViewItem x in listView2.SelectedItems)
+                foreach(ListViewItem x in listView2.SelectedItems)
                 {
                     recipeCollection.RemoveAt(x.Index);
                     List<string> allergies = this.txtRecipeAllergens.Text.Split(',').ToList();
@@ -193,7 +196,7 @@ namespace Lab_3
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (ListViewItem x in listView2.SelectedItems)
+            foreach(ListViewItem x in listView2.SelectedItems)
             {
                 this.txtRecipeCode.Text = x.SubItems[0].Text;
                 this.txtRecipeName.Text = x.SubItems[1].Text;
@@ -203,7 +206,7 @@ namespace Lab_3
 
         private void btnRecipeDelete_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem x in listView2.SelectedItems)
+            foreach(ListViewItem x in listView2.SelectedItems)
             {
                 recipeCollection.RemoveAt(x.Index);
                 listView2.Items.RemoveAt(x.Index);
@@ -216,11 +219,12 @@ namespace Lab_3
 
         private void btnRecipeAdd_Click(object sender, EventArgs e)
         {
-            if (btnRecipeAdd.Text == "Add")
+            if(btnRecipeAdd.Text == "Add")
             {
                 btnRecipeAdd.Text = "Save";
                 this.txtRecipeCode.Text = "";
                 this.txtRecipeName.Text = "";
+                //Task 5 : Replace with DropDownList
                 this.txtRecipeAllergens.Text = "";
                 this.txtRecipeCode.Enabled = true;
                 this.txtRecipeName.Enabled = true;
@@ -243,16 +247,16 @@ namespace Lab_3
             }
         }
 
-        
+
         private void btnCalculateAverage_Click(object sender, EventArgs e)
         {
             txtAverageAllergen.Text = "";
             int recipeCount = 0, allergenCount = 0;
 
-            foreach (Recipe r in recipeCollection)
+            foreach(Recipe r in recipeCollection)
             {
                 recipeCount++;
-                foreach (string s in r.recipeBookAllergens)
+                foreach(string s in r.recipeBookAllergens)
                 {
                     allergenCount++;
                 }
@@ -266,22 +270,22 @@ namespace Lab_3
         {
             Dictionary<string, int> CountAllergies = new Dictionary<string, int>();
 
-            foreach (Recipe r in recipeCollection)
+            foreach(Recipe r in recipeCollection)
             {
-                foreach (string s in r.recipeBookAllergens)
+                foreach(string s in r.recipeBookAllergens)
                 {
-                    if (!CountAllergies.ContainsKey(s))
+                    if(!CountAllergies.ContainsKey(s))
                     {
                         CountAllergies.Add(s, 0);
                     }
                 }
             }
 
-            foreach (Recipe r in recipeCollection)
+            foreach(Recipe r in recipeCollection)
             {
-                foreach (string s in r.recipeBookAllergens)
+                foreach(string s in r.recipeBookAllergens)
                 {
-                    if (r.recipeBookAllergens.Contains(s))
+                    if(r.recipeBookAllergens.Contains(s))
                     {
                         CountAllergies[s] += 1;
                     }
@@ -296,7 +300,7 @@ namespace Lab_3
 
         private void btnSearchRecipes_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem l in listView3.Items)
+            foreach(ListViewItem l in listView3.Items)
             {
                 listView3.Items.RemoveAt(l.Index);
             }
@@ -307,17 +311,17 @@ namespace Lab_3
             int counter = searchAllergies.Count;
             int x = 0;
 
-            foreach (Recipe r in recipeCollection)
+            foreach(Recipe r in recipeCollection)
             {
-                foreach (string s in searchAllergies)
+                foreach(string s in searchAllergies)
                 {
-                    if (r.recipeBookAllergens.Contains(s))
+                    if(r.recipeBookAllergens.Contains(s))
                     {
                         x++;
                     }
                 }
 
-                if (x == 0)
+                if(x == 0)
                 {
                     foundRecipes.Add(r.recipeBookName);
                     x = 0;
@@ -325,7 +329,7 @@ namespace Lab_3
                 x = 0;
             }
 
-            foreach (string f in foundRecipes)
+            foreach(string f in foundRecipes)
             {
                 listView3.Items.Add(new ListViewItem(new string[] { f }));
             }
@@ -333,7 +337,7 @@ namespace Lab_3
             foundRecipes.Clear();
         }
 
-        
+
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
