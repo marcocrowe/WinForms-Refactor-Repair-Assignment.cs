@@ -7,7 +7,7 @@ It is worth 30%.
 Please upload a visual studio project to Moodle on completion.
 On Moodle you will find a software application that allows users to store information about common allergies found in recipes.
 Answer all questions:
-Bug List – fix the following.
+Bug List: fix the following.
 
 1. When the user updates the allergen name on the allergen panel the allergen code is saved to the allergen name.**[3 Marks]**
 2. Add a delete confirmation to the delete button on the allergen panel. So, when the user selects the delete button a message is displayed asking them to confirm or cancel the delete action. The message should contain the name of the allergen that is selected for deletion. **[3 Marks]**
