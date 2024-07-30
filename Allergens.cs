@@ -5,17 +5,10 @@ using System.Text;
 namespace Lab_3
 {
     [Serializable]
-    public class Allergens
+    public class Allergens(string code, string name)
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        
-
-        public Allergens(string code, string name)
-        {
-            this.Code = code;
-            this.Name = name;
-        }
+        public string Code { get; set; } = code;
+        public string Name { get; set; } = name;
     }
 }
 

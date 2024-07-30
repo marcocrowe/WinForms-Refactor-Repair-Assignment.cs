@@ -1,5 +1,5 @@
 
-# Class Test A
+# C# WinForms Refactor and Repair Assignment: Class Test A
 
 This is an in class, open book assessment. You have 1.5 hours to complete this assignment.
 It is worth 30%.

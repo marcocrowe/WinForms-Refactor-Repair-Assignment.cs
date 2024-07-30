@@ -29,424 +29,449 @@ namespace Lab_3
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRecipeDelete = new System.Windows.Forms.Button();
-            this.btnRecipeEdit = new System.Windows.Forms.Button();
-            this.btnRecipeAdd = new System.Windows.Forms.Button();
-            this.lblRecipeAllergens = new System.Windows.Forms.Label();
-            this.lblRecipeName = new System.Windows.Forms.Label();
-            this.txtRecipeAllergens = new System.Windows.Forms.TextBox();
-            this.txtRecipeName = new System.Windows.Forms.TextBox();
-            this.txtRecipeCode = new System.Windows.Forms.TextBox();
-            this.lblRecipeCode = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.recipeCode = new System.Windows.Forms.ColumnHeader();
-            this.recipeName = new System.Windows.Forms.ColumnHeader();
-            this.recipeAllergens = new System.Windows.Forms.ColumnHeader();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCalculateAverage = new System.Windows.Forms.Button();
-            this.lblFindAllergen = new System.Windows.Forms.Label();
-            this.btnFindAllergen = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSearchRecipes = new System.Windows.Forms.Button();
-            this.txtAverageAllergen = new System.Windows.Forms.TextBox();
-            this.txtFoundAllergen = new System.Windows.Forms.TextBox();
-            this.txtSearchAllergens = new System.Windows.Forms.TextBox();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.lvsearchRecipes = new System.Windows.Forms.ColumnHeader();
-            this.lblAllergensCode = new System.Windows.Forms.Label();
-            this.lblAlergensName = new System.Windows.Forms.Label();
-            this.txtAllergensCode = new System.Windows.Forms.TextBox();
-            this.txtAllergensName = new System.Windows.Forms.TextBox();
-            this.btnAllergensAdd = new System.Windows.Forms.Button();
-            this.btnAllergensEdit = new System.Windows.Forms.Button();
-            this.btnAllergensDelete = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnOne = new System.Windows.Forms.ColumnHeader();
-            this.columnTwo = new System.Windows.Forms.ColumnHeader();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
+            btnRecipeDelete = new System.Windows.Forms.Button();
+            btnRecipeEdit = new System.Windows.Forms.Button();
+            btnRecipeAdd = new System.Windows.Forms.Button();
+            lblRecipeAllergens = new System.Windows.Forms.Label();
+            lblRecipeName = new System.Windows.Forms.Label();
+            txtRecipeAllergens = new System.Windows.Forms.TextBox();
+            txtRecipeName = new System.Windows.Forms.TextBox();
+            txtRecipeCode = new System.Windows.Forms.TextBox();
+            lblRecipeCode = new System.Windows.Forms.Label();
+            listView2 = new System.Windows.Forms.ListView();
+            recipeCode = new System.Windows.Forms.ColumnHeader();
+            recipeName = new System.Windows.Forms.ColumnHeader();
+            recipeAllergens = new System.Windows.Forms.ColumnHeader();
+            label1 = new System.Windows.Forms.Label();
+            btnCalculateAverage = new System.Windows.Forms.Button();
+            lblFindAllergen = new System.Windows.Forms.Label();
+            btnFindAllergen = new System.Windows.Forms.Button();
+            label3 = new System.Windows.Forms.Label();
+            btnSearchRecipes = new System.Windows.Forms.Button();
+            txtAverageAllergen = new System.Windows.Forms.TextBox();
+            txtFoundAllergen = new System.Windows.Forms.TextBox();
+            txtSearchAllergens = new System.Windows.Forms.TextBox();
+            listView3 = new System.Windows.Forms.ListView();
+            lvsearchRecipes = new System.Windows.Forms.ColumnHeader();
+            lblAllergensCode = new System.Windows.Forms.Label();
+            lblAlergensName = new System.Windows.Forms.Label();
+            txtAllergensCode = new System.Windows.Forms.TextBox();
+            txtAllergensName = new System.Windows.Forms.TextBox();
+            btnAllergensAdd = new System.Windows.Forms.Button();
+            btnAllergensEdit = new System.Windows.Forms.Button();
+            btnAllergensDelete = new System.Windows.Forms.Button();
+            listView1 = new System.Windows.Forms.ListView();
+            columnOne = new System.Windows.Forms.ColumnHeader();
+            columnTwo = new System.Windows.Forms.ColumnHeader();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            groupBox2 = new System.Windows.Forms.GroupBox();
+            groupBox3 = new System.Windows.Forms.GroupBox();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            SuspendLayout();
             // 
             // btnRecipeDelete
             // 
-            this.btnRecipeDelete.Location = new System.Drawing.Point(457, 230);
-            this.btnRecipeDelete.Name = "btnRecipeDelete";
-            this.btnRecipeDelete.Size = new System.Drawing.Size(83, 28);
-            this.btnRecipeDelete.TabIndex = 9;
-            this.btnRecipeDelete.Text = "Delete";
-            this.btnRecipeDelete.UseVisualStyleBackColor = true;
-            this.btnRecipeDelete.Click += new System.EventHandler(this.btnRecipeDelete_Click);
+            btnRecipeDelete.Location = new System.Drawing.Point(653, 383);
+            btnRecipeDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnRecipeDelete.Name = "btnRecipeDelete";
+            btnRecipeDelete.Size = new System.Drawing.Size(119, 47);
+            btnRecipeDelete.TabIndex = 9;
+            btnRecipeDelete.Text = "Delete";
+            btnRecipeDelete.UseVisualStyleBackColor = true;
+            btnRecipeDelete.Click += btnRecipeDelete_Click;
             // 
             // btnRecipeEdit
             // 
-            this.btnRecipeEdit.Location = new System.Drawing.Point(580, 179);
-            this.btnRecipeEdit.Name = "btnRecipeEdit";
-            this.btnRecipeEdit.Size = new System.Drawing.Size(83, 28);
-            this.btnRecipeEdit.TabIndex = 8;
-            this.btnRecipeEdit.Text = "Edit";
-            this.btnRecipeEdit.UseVisualStyleBackColor = true;
-            this.btnRecipeEdit.Click += new System.EventHandler(this.btnRecipeEdit_Click);
+            btnRecipeEdit.Location = new System.Drawing.Point(829, 298);
+            btnRecipeEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnRecipeEdit.Name = "btnRecipeEdit";
+            btnRecipeEdit.Size = new System.Drawing.Size(119, 47);
+            btnRecipeEdit.TabIndex = 8;
+            btnRecipeEdit.Text = "Edit";
+            btnRecipeEdit.UseVisualStyleBackColor = true;
+            btnRecipeEdit.Click += btnRecipeEdit_Click;
             // 
             // btnRecipeAdd
             // 
-            this.btnRecipeAdd.Location = new System.Drawing.Point(457, 179);
-            this.btnRecipeAdd.Name = "btnRecipeAdd";
-            this.btnRecipeAdd.Size = new System.Drawing.Size(83, 28);
-            this.btnRecipeAdd.TabIndex = 7;
-            this.btnRecipeAdd.Text = "Add";
-            this.btnRecipeAdd.UseVisualStyleBackColor = true;
-            this.btnRecipeAdd.Click += new System.EventHandler(this.btnRecipeAdd_Click);
+            btnRecipeAdd.Location = new System.Drawing.Point(653, 298);
+            btnRecipeAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnRecipeAdd.Name = "btnRecipeAdd";
+            btnRecipeAdd.Size = new System.Drawing.Size(119, 47);
+            btnRecipeAdd.TabIndex = 7;
+            btnRecipeAdd.Text = "Add";
+            btnRecipeAdd.UseVisualStyleBackColor = true;
+            btnRecipeAdd.Click += btnRecipeAdd_Click;
             // 
             // lblRecipeAllergens
             // 
-            this.lblRecipeAllergens.AutoSize = true;
-            this.lblRecipeAllergens.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRecipeAllergens.Location = new System.Drawing.Point(404, 122);
-            this.lblRecipeAllergens.Name = "lblRecipeAllergens";
-            this.lblRecipeAllergens.Size = new System.Drawing.Size(78, 20);
-            this.lblRecipeAllergens.TabIndex = 6;
-            this.lblRecipeAllergens.Text = "Allergens :";
+            lblRecipeAllergens.AutoSize = true;
+            lblRecipeAllergens.Font = new System.Drawing.Font("Segoe UI", 11F);
+            lblRecipeAllergens.Location = new System.Drawing.Point(577, 203);
+            lblRecipeAllergens.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRecipeAllergens.Name = "lblRecipeAllergens";
+            lblRecipeAllergens.Size = new System.Drawing.Size(100, 25);
+            lblRecipeAllergens.TabIndex = 6;
+            lblRecipeAllergens.Text = "Allergens :";
             // 
             // lblRecipeName
             // 
-            this.lblRecipeName.AutoSize = true;
-            this.lblRecipeName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRecipeName.Location = new System.Drawing.Point(426, 68);
-            this.lblRecipeName.Name = "lblRecipeName";
-            this.lblRecipeName.Size = new System.Drawing.Size(56, 20);
-            this.lblRecipeName.TabIndex = 5;
-            this.lblRecipeName.Text = "Name :";
+            lblRecipeName.AutoSize = true;
+            lblRecipeName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            lblRecipeName.Location = new System.Drawing.Point(609, 113);
+            lblRecipeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRecipeName.Name = "lblRecipeName";
+            lblRecipeName.Size = new System.Drawing.Size(71, 25);
+            lblRecipeName.TabIndex = 5;
+            lblRecipeName.Text = "Name :";
             // 
             // txtRecipeAllergens
             // 
-            this.txtRecipeAllergens.Enabled = false;
-            this.txtRecipeAllergens.Location = new System.Drawing.Point(488, 119);
-            this.txtRecipeAllergens.Name = "txtRecipeAllergens";
-            this.txtRecipeAllergens.Size = new System.Drawing.Size(206, 23);
-            this.txtRecipeAllergens.TabIndex = 4;
+            txtRecipeAllergens.Enabled = false;
+            txtRecipeAllergens.Location = new System.Drawing.Point(697, 198);
+            txtRecipeAllergens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtRecipeAllergens.Name = "txtRecipeAllergens";
+            txtRecipeAllergens.Size = new System.Drawing.Size(293, 31);
+            txtRecipeAllergens.TabIndex = 4;
             // 
             // txtRecipeName
             // 
-            this.txtRecipeName.Enabled = false;
-            this.txtRecipeName.Location = new System.Drawing.Point(488, 65);
-            this.txtRecipeName.Name = "txtRecipeName";
-            this.txtRecipeName.Size = new System.Drawing.Size(206, 23);
-            this.txtRecipeName.TabIndex = 3;
+            txtRecipeName.Enabled = false;
+            txtRecipeName.Location = new System.Drawing.Point(697, 108);
+            txtRecipeName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtRecipeName.Name = "txtRecipeName";
+            txtRecipeName.Size = new System.Drawing.Size(293, 31);
+            txtRecipeName.TabIndex = 3;
             // 
             // txtRecipeCode
             // 
-            this.txtRecipeCode.Enabled = false;
-            this.txtRecipeCode.Location = new System.Drawing.Point(488, 19);
-            this.txtRecipeCode.Name = "txtRecipeCode";
-            this.txtRecipeCode.Size = new System.Drawing.Size(206, 23);
-            this.txtRecipeCode.TabIndex = 1;
+            txtRecipeCode.Enabled = false;
+            txtRecipeCode.Location = new System.Drawing.Point(697, 32);
+            txtRecipeCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtRecipeCode.Name = "txtRecipeCode";
+            txtRecipeCode.Size = new System.Drawing.Size(293, 31);
+            txtRecipeCode.TabIndex = 1;
             // 
             // lblRecipeCode
             // 
-            this.lblRecipeCode.AutoSize = true;
-            this.lblRecipeCode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRecipeCode.Location = new System.Drawing.Point(431, 22);
-            this.lblRecipeCode.Name = "lblRecipeCode";
-            this.lblRecipeCode.Size = new System.Drawing.Size(51, 20);
-            this.lblRecipeCode.TabIndex = 2;
-            this.lblRecipeCode.Text = "Code :";
+            lblRecipeCode.AutoSize = true;
+            lblRecipeCode.Font = new System.Drawing.Font("Segoe UI", 11F);
+            lblRecipeCode.Location = new System.Drawing.Point(616, 37);
+            lblRecipeCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRecipeCode.Name = "lblRecipeCode";
+            lblRecipeCode.Size = new System.Drawing.Size(65, 25);
+            lblRecipeCode.TabIndex = 2;
+            lblRecipeCode.Text = "Code :";
             // 
             // listView2
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.recipeCode,
-            this.recipeName,
-            this.recipeAllergens});
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(17, 22);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(332, 265);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { recipeCode, recipeName, recipeAllergens });
+            listView2.GridLines = true;
+            listView2.Location = new System.Drawing.Point(24, 37);
+            listView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            listView2.Name = "listView2";
+            listView2.Size = new System.Drawing.Size(473, 439);
+            listView2.TabIndex = 0;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = System.Windows.Forms.View.Details;
+            listView2.SelectedIndexChanged += listView2_SelectedIndexChanged;
             // 
             // recipeCode
             // 
-            this.recipeCode.Text = "Code";
+            recipeCode.Text = "Code";
             // 
             // recipeName
             // 
-            this.recipeName.Text = "Name";
-            this.recipeName.Width = 120;
+            recipeName.Text = "Name";
+            recipeName.Width = 120;
             // 
             // recipeAllergens
             // 
-            this.recipeAllergens.Text = "Allergens";
-            this.recipeAllergens.Width = 150;
+            recipeAllergens.Text = "Allergens";
+            recipeAllergens.Width = 150;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Average number of allergens in recipes:\r\n";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(9, 43);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(324, 25);
+            label1.TabIndex = 0;
+            label1.Text = "Average number of allergens in recipes:\r\n";
             // 
             // btnCalculateAverage
             // 
-            this.btnCalculateAverage.Location = new System.Drawing.Point(415, 22);
-            this.btnCalculateAverage.Name = "btnCalculateAverage";
-            this.btnCalculateAverage.Size = new System.Drawing.Size(75, 23);
-            this.btnCalculateAverage.TabIndex = 3;
-            this.btnCalculateAverage.Text = "Calculate";
-            this.btnCalculateAverage.UseVisualStyleBackColor = true;
-            this.btnCalculateAverage.Click += new System.EventHandler(this.btnCalculateAverage_Click);
+            btnCalculateAverage.Location = new System.Drawing.Point(593, 37);
+            btnCalculateAverage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnCalculateAverage.Name = "btnCalculateAverage";
+            btnCalculateAverage.Size = new System.Drawing.Size(107, 38);
+            btnCalculateAverage.TabIndex = 3;
+            btnCalculateAverage.Text = "Calculate";
+            btnCalculateAverage.UseVisualStyleBackColor = true;
+            btnCalculateAverage.Click += btnCalculateAverage_Click;
             // 
             // lblFindAllergen
             // 
-            this.lblFindAllergen.AutoSize = true;
-            this.lblFindAllergen.Location = new System.Drawing.Point(58, 68);
-            this.lblFindAllergen.Name = "lblFindAllergen";
-            this.lblFindAllergen.Size = new System.Drawing.Size(163, 15);
-            this.lblFindAllergen.TabIndex = 5;
-            this.lblFindAllergen.Text = "Find most common allergen: ";
+            lblFindAllergen.AutoSize = true;
+            lblFindAllergen.Location = new System.Drawing.Point(83, 113);
+            lblFindAllergen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblFindAllergen.Name = "lblFindAllergen";
+            lblFindAllergen.Size = new System.Drawing.Size(245, 25);
+            lblFindAllergen.TabIndex = 5;
+            lblFindAllergen.Text = "Find most common allergen: ";
             // 
             // btnFindAllergen
             // 
-            this.btnFindAllergen.Location = new System.Drawing.Point(415, 64);
-            this.btnFindAllergen.Name = "btnFindAllergen";
-            this.btnFindAllergen.Size = new System.Drawing.Size(75, 23);
-            this.btnFindAllergen.TabIndex = 7;
-            this.btnFindAllergen.Text = "Find";
-            this.btnFindAllergen.UseVisualStyleBackColor = true;
-            this.btnFindAllergen.Click += new System.EventHandler(this.btnFindAllergen_Click);
+            btnFindAllergen.Location = new System.Drawing.Point(593, 107);
+            btnFindAllergen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnFindAllergen.Name = "btnFindAllergen";
+            btnFindAllergen.Size = new System.Drawing.Size(107, 38);
+            btnFindAllergen.TabIndex = 7;
+            btnFindAllergen.Text = "Find";
+            btnFindAllergen.UseVisualStyleBackColor = true;
+            btnFindAllergen.Click += btnFindAllergen_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Search for recipes:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(169, 183);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(156, 25);
+            label3.TabIndex = 8;
+            label3.Text = "Search for recipes:";
             // 
             // btnSearchRecipes
             // 
-            this.btnSearchRecipes.Location = new System.Drawing.Point(415, 107);
-            this.btnSearchRecipes.Name = "btnSearchRecipes";
-            this.btnSearchRecipes.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchRecipes.TabIndex = 10;
-            this.btnSearchRecipes.Text = "Search";
-            this.btnSearchRecipes.UseVisualStyleBackColor = true;
-            this.btnSearchRecipes.Click += new System.EventHandler(this.btnSearchRecipes_Click);
+            btnSearchRecipes.Location = new System.Drawing.Point(593, 178);
+            btnSearchRecipes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnSearchRecipes.Name = "btnSearchRecipes";
+            btnSearchRecipes.Size = new System.Drawing.Size(107, 38);
+            btnSearchRecipes.TabIndex = 10;
+            btnSearchRecipes.Text = "Search";
+            btnSearchRecipes.UseVisualStyleBackColor = true;
+            btnSearchRecipes.Click += btnSearchRecipes_Click;
             // 
             // txtAverageAllergen
             // 
-            this.txtAverageAllergen.Location = new System.Drawing.Point(228, 22);
-            this.txtAverageAllergen.Name = "txtAverageAllergen";
-            this.txtAverageAllergen.ReadOnly = true;
-            this.txtAverageAllergen.Size = new System.Drawing.Size(181, 23);
-            this.txtAverageAllergen.TabIndex = 4;
+            txtAverageAllergen.Location = new System.Drawing.Point(326, 37);
+            txtAverageAllergen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtAverageAllergen.Name = "txtAverageAllergen";
+            txtAverageAllergen.ReadOnly = true;
+            txtAverageAllergen.Size = new System.Drawing.Size(257, 31);
+            txtAverageAllergen.TabIndex = 4;
             // 
             // txtFoundAllergen
             // 
-            this.txtFoundAllergen.Location = new System.Drawing.Point(228, 64);
-            this.txtFoundAllergen.Name = "txtFoundAllergen";
-            this.txtFoundAllergen.ReadOnly = true;
-            this.txtFoundAllergen.Size = new System.Drawing.Size(181, 23);
-            this.txtFoundAllergen.TabIndex = 6;
+            txtFoundAllergen.Location = new System.Drawing.Point(326, 107);
+            txtFoundAllergen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtFoundAllergen.Name = "txtFoundAllergen";
+            txtFoundAllergen.ReadOnly = true;
+            txtFoundAllergen.Size = new System.Drawing.Size(257, 31);
+            txtFoundAllergen.TabIndex = 6;
             // 
             // txtSearchAllergens
             // 
-            this.txtSearchAllergens.Location = new System.Drawing.Point(228, 107);
-            this.txtSearchAllergens.Name = "txtSearchAllergens";
-            this.txtSearchAllergens.Size = new System.Drawing.Size(181, 23);
-            this.txtSearchAllergens.TabIndex = 9;
+            txtSearchAllergens.Location = new System.Drawing.Point(326, 178);
+            txtSearchAllergens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtSearchAllergens.Name = "txtSearchAllergens";
+            txtSearchAllergens.Size = new System.Drawing.Size(257, 31);
+            txtSearchAllergens.TabIndex = 9;
             // 
             // listView3
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.lvsearchRecipes});
-            this.listView3.GridLines = true;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(523, 22);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(283, 232);
-            this.listView3.TabIndex = 11;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { lvsearchRecipes });
+            listView3.GridLines = true;
+            listView3.Location = new System.Drawing.Point(747, 37);
+            listView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            listView3.Name = "listView3";
+            listView3.Size = new System.Drawing.Size(403, 384);
+            listView3.TabIndex = 11;
+            listView3.UseCompatibleStateImageBehavior = false;
+            listView3.View = System.Windows.Forms.View.Details;
             // 
             // lvsearchRecipes
             // 
-            this.lvsearchRecipes.Text = "Recipes";
-            this.lvsearchRecipes.Width = 179;
+            lvsearchRecipes.Text = "Recipes";
+            lvsearchRecipes.Width = 179;
             // 
             // lblAllergensCode
             // 
-            this.lblAllergensCode.AutoSize = true;
-            this.lblAllergensCode.Location = new System.Drawing.Point(211, 22);
-            this.lblAllergensCode.Name = "lblAllergensCode";
-            this.lblAllergensCode.Size = new System.Drawing.Size(44, 15);
-            this.lblAllergensCode.TabIndex = 1;
-            this.lblAllergensCode.Text = " Code :";
+            lblAllergensCode.AutoSize = true;
+            lblAllergensCode.Location = new System.Drawing.Point(301, 37);
+            lblAllergensCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAllergensCode.Name = "lblAllergensCode";
+            lblAllergensCode.Size = new System.Drawing.Size(68, 25);
+            lblAllergensCode.TabIndex = 1;
+            lblAllergensCode.Text = " Code :";
             // 
             // lblAlergensName
             // 
-            this.lblAlergensName.AutoSize = true;
-            this.lblAlergensName.Location = new System.Drawing.Point(211, 62);
-            this.lblAlergensName.Name = "lblAlergensName";
-            this.lblAlergensName.Size = new System.Drawing.Size(45, 15);
-            this.lblAlergensName.TabIndex = 2;
-            this.lblAlergensName.Text = "Name :";
+            lblAlergensName.AutoSize = true;
+            lblAlergensName.Location = new System.Drawing.Point(301, 103);
+            lblAlergensName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAlergensName.Name = "lblAlergensName";
+            lblAlergensName.Size = new System.Drawing.Size(68, 25);
+            lblAlergensName.TabIndex = 2;
+            lblAlergensName.Text = "Name :";
             // 
             // txtAllergensCode
             // 
-            this.txtAllergensCode.Enabled = false;
-            this.txtAllergensCode.Location = new System.Drawing.Point(273, 14);
-            this.txtAllergensCode.Name = "txtAllergensCode";
-            this.txtAllergensCode.Size = new System.Drawing.Size(132, 23);
-            this.txtAllergensCode.TabIndex = 3;
+            txtAllergensCode.Enabled = false;
+            txtAllergensCode.Location = new System.Drawing.Point(390, 23);
+            txtAllergensCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtAllergensCode.Name = "txtAllergensCode";
+            txtAllergensCode.Size = new System.Drawing.Size(187, 31);
+            txtAllergensCode.TabIndex = 3;
             // 
             // txtAllergensName
             // 
-            this.txtAllergensName.Enabled = false;
-            this.txtAllergensName.Location = new System.Drawing.Point(273, 54);
-            this.txtAllergensName.Name = "txtAllergensName";
-            this.txtAllergensName.Size = new System.Drawing.Size(132, 23);
-            this.txtAllergensName.TabIndex = 4;
+            txtAllergensName.Enabled = false;
+            txtAllergensName.Location = new System.Drawing.Point(390, 90);
+            txtAllergensName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            txtAllergensName.Name = "txtAllergensName";
+            txtAllergensName.Size = new System.Drawing.Size(187, 31);
+            txtAllergensName.TabIndex = 4;
             // 
             // btnAllergensAdd
             // 
-            this.btnAllergensAdd.Location = new System.Drawing.Point(223, 110);
-            this.btnAllergensAdd.Name = "btnAllergensAdd";
-            this.btnAllergensAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAllergensAdd.TabIndex = 5;
-            this.btnAllergensAdd.Text = "Add";
-            this.btnAllergensAdd.UseVisualStyleBackColor = true;
-            this.btnAllergensAdd.Click += new System.EventHandler(this.btnAllergensAdd_Click);
+            btnAllergensAdd.Location = new System.Drawing.Point(319, 183);
+            btnAllergensAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnAllergensAdd.Name = "btnAllergensAdd";
+            btnAllergensAdd.Size = new System.Drawing.Size(107, 38);
+            btnAllergensAdd.TabIndex = 5;
+            btnAllergensAdd.Text = "Add";
+            btnAllergensAdd.UseVisualStyleBackColor = true;
+            btnAllergensAdd.Click += btnAllergensAdd_Click;
             // 
             // btnAllergensEdit
             // 
-            this.btnAllergensEdit.Location = new System.Drawing.Point(330, 109);
-            this.btnAllergensEdit.Name = "btnAllergensEdit";
-            this.btnAllergensEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnAllergensEdit.TabIndex = 6;
-            this.btnAllergensEdit.Text = "Edit";
-            this.btnAllergensEdit.UseVisualStyleBackColor = true;
-            this.btnAllergensEdit.Click += new System.EventHandler(this.btnAllergensEdit_Click);
+            btnAllergensEdit.Location = new System.Drawing.Point(471, 182);
+            btnAllergensEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnAllergensEdit.Name = "btnAllergensEdit";
+            btnAllergensEdit.Size = new System.Drawing.Size(107, 38);
+            btnAllergensEdit.TabIndex = 6;
+            btnAllergensEdit.Text = "Edit";
+            btnAllergensEdit.UseVisualStyleBackColor = true;
+            btnAllergensEdit.Click += btnAllergensEdit_Click;
             // 
             // btnAllergensDelete
             // 
-            this.btnAllergensDelete.Location = new System.Drawing.Point(222, 157);
-            this.btnAllergensDelete.Name = "btnAllergensDelete";
-            this.btnAllergensDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnAllergensDelete.TabIndex = 7;
-            this.btnAllergensDelete.Text = "Delete";
-            this.btnAllergensDelete.UseVisualStyleBackColor = true;
-            this.btnAllergensDelete.Click += new System.EventHandler(this.btnAllergensDelete_Click);
+            btnAllergensDelete.Location = new System.Drawing.Point(317, 262);
+            btnAllergensDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            btnAllergensDelete.Name = "btnAllergensDelete";
+            btnAllergensDelete.Size = new System.Drawing.Size(107, 38);
+            btnAllergensDelete.TabIndex = 7;
+            btnAllergensDelete.Text = "Delete";
+            btnAllergensDelete.UseVisualStyleBackColor = true;
+            btnAllergensDelete.Click += btnAllergensDelete_Click;
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnOne,
-            this.columnTwo});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 22);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(185, 234);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnOne, columnTwo });
+            listView1.GridLines = true;
+            listView1.Location = new System.Drawing.Point(29, 37);
+            listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            listView1.MultiSelect = false;
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(263, 387);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = System.Windows.Forms.View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // columnOne
             // 
-            this.columnOne.Text = "Code";
+            columnOne.Text = "Code";
             // 
             // columnTwo
             // 
-            this.columnTwo.Text = "Name";
-            this.columnTwo.Width = 120;
+            columnTwo.Text = "Name";
+            columnTwo.Width = 120;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.txtAllergensCode);
-            this.groupBox1.Controls.Add(this.txtAllergensName);
-            this.groupBox1.Controls.Add(this.btnAllergensAdd);
-            this.groupBox1.Controls.Add(this.lblAlergensName);
-            this.groupBox1.Controls.Add(this.btnAllergensEdit);
-            this.groupBox1.Controls.Add(this.btnAllergensDelete);
-            this.groupBox1.Controls.Add(this.lblAllergensCode);
-            this.groupBox1.Location = new System.Drawing.Point(717, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 310);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Allergens";
+            groupBox1.Controls.Add(listView1);
+            groupBox1.Controls.Add(txtAllergensCode);
+            groupBox1.Controls.Add(txtAllergensName);
+            groupBox1.Controls.Add(btnAllergensAdd);
+            groupBox1.Controls.Add(lblAlergensName);
+            groupBox1.Controls.Add(btnAllergensEdit);
+            groupBox1.Controls.Add(btnAllergensDelete);
+            groupBox1.Controls.Add(lblAllergensCode);
+            groupBox1.Location = new System.Drawing.Point(1024, 20);
+            groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            groupBox1.Size = new System.Drawing.Size(610, 517);
+            groupBox1.TabIndex = 12;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Allergens";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView2);
-            this.groupBox2.Controls.Add(this.lblRecipeCode);
-            this.groupBox2.Controls.Add(this.lblRecipeName);
-            this.groupBox2.Controls.Add(this.txtRecipeAllergens);
-            this.groupBox2.Controls.Add(this.lblRecipeAllergens);
-            this.groupBox2.Controls.Add(this.txtRecipeName);
-            this.groupBox2.Controls.Add(this.btnRecipeAdd);
-            this.groupBox2.Controls.Add(this.txtRecipeCode);
-            this.groupBox2.Controls.Add(this.btnRecipeEdit);
-            this.groupBox2.Controls.Add(this.btnRecipeDelete);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(699, 314);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Recipes";
+            groupBox2.Controls.Add(listView2);
+            groupBox2.Controls.Add(lblRecipeCode);
+            groupBox2.Controls.Add(lblRecipeName);
+            groupBox2.Controls.Add(txtRecipeAllergens);
+            groupBox2.Controls.Add(lblRecipeAllergens);
+            groupBox2.Controls.Add(txtRecipeName);
+            groupBox2.Controls.Add(btnRecipeAdd);
+            groupBox2.Controls.Add(txtRecipeCode);
+            groupBox2.Controls.Add(btnRecipeEdit);
+            groupBox2.Controls.Add(btnRecipeDelete);
+            groupBox2.Location = new System.Drawing.Point(17, 20);
+            groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            groupBox2.Size = new System.Drawing.Size(999, 523);
+            groupBox2.TabIndex = 13;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Recipes";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtAverageAllergen);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.btnCalculateAverage);
-            this.groupBox3.Controls.Add(this.listView3);
-            this.groupBox3.Controls.Add(this.lblFindAllergen);
-            this.groupBox3.Controls.Add(this.txtSearchAllergens);
-            this.groupBox3.Controls.Add(this.btnFindAllergen);
-            this.groupBox3.Controls.Add(this.txtFoundAllergen);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.btnSearchRecipes);
-            this.groupBox3.Location = new System.Drawing.Point(19, 342);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1125, 332);
-            this.groupBox3.TabIndex = 14;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Statistics";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            groupBox3.Controls.Add(txtAverageAllergen);
+            groupBox3.Controls.Add(label1);
+            groupBox3.Controls.Add(btnCalculateAverage);
+            groupBox3.Controls.Add(listView3);
+            groupBox3.Controls.Add(lblFindAllergen);
+            groupBox3.Controls.Add(txtSearchAllergens);
+            groupBox3.Controls.Add(btnFindAllergen);
+            groupBox3.Controls.Add(txtFoundAllergen);
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(btnSearchRecipes);
+            groupBox3.Location = new System.Drawing.Point(27, 570);
+            groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            groupBox3.Size = new System.Drawing.Size(1607, 553);
+            groupBox3.TabIndex = 14;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Statistics";
+            groupBox3.Enter += groupBox3_Enter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 661);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1826, 1102);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
