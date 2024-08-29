@@ -153,7 +153,7 @@ namespace Lab_3
             {
                 ListAllergens.Add(new Allergens(this.txtAllergensCode.Text, this.txtAllergensName.Text));
 
-                string[] row = { this.txtAllergensCode.Text, this.txtAllergensName.Text };
+                string[] row = [txtAllergensCode.Text, txtAllergensName.Text];
                 var listViewItem = new ListViewItem(row);
 
                 this.listView1.Items.Add(listViewItem);
