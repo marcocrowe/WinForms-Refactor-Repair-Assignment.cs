@@ -15,8 +15,8 @@ namespace Lab_3
 {
     public partial class Form1 : Form
     {
-        public List<Allergens> ListAllergens = new List<Allergens>();
-        public List<Recipe> recipeCollection = new List<Recipe>();
+        public List<Allergens> ListAllergens = [];
+        public List<Recipe> recipeCollection = [];
         public string allergensCurFile = "allergens.txt";
         public string recipeCurFile = "recipe.txt";
 
