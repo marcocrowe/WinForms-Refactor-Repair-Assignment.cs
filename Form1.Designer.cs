@@ -14,7 +14,7 @@ namespace Lab_3
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if(disposing && (components != null))
             {
                 components.Dispose();
             }
@@ -481,6 +481,7 @@ namespace Lab_3
         private System.Windows.Forms.Button btnRecipeAdd;
         private System.Windows.Forms.Label lblRecipeAllergens;
         private System.Windows.Forms.Label lblRecipeName;
+        //TODO: Task 5 Change to a drop-down list control containing the allergens names to the allergens field
         private System.Windows.Forms.TextBox txtRecipeAllergens;
         private System.Windows.Forms.TextBox txtRecipeName;
         private System.Windows.Forms.TextBox txtRecipeCode;
@@ -510,6 +511,7 @@ namespace Lab_3
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnOne;
         private System.Windows.Forms.ColumnHeader columnTwo;
+        //TODO: Task 3 Extract Allergens Panel to Seperate Windows Form
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
