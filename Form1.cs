@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -127,9 +127,16 @@ namespace Lab_3
 
         private void btnAllergensDelete_Click(object sender, EventArgs e)
         {
-            //TODO:Task 2
-            foreach(ListViewItem x in listView1.SelectedItems)
+            foreach (ListViewItem x in listView1.SelectedItems)
             {
+                int allergenNameColumnIndex = 1; // Assuming the allergen name is in the second column
+                string allergenName = x.SubItems[allergenNameColumnIndex].Text; // Assuming the allergen name is in the second column
+                string boxText = $"Are you sure you want to delete the allergen '{allergenName}'?";
+                DialogResult result = MessageBox.Show(boxText, "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result != DialogResult.Yes)
+                    break;
+
                 ListAllergens.RemoveAt(x.Index);
                 listView1.Items.RemoveAt(x.Index);
             }
