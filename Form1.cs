@@ -117,7 +117,7 @@ namespace Lab_3
 
                     //TODO:Task 1 - Bug
                     x.SubItems[0].Text = this.txtAllergensCode.Text;
-                    x.SubItems[1].Text = this.txtAllergensCode.Text;
+                    x.SubItems[1].Text = this.txtAllergensName.Text;
                 }
                 btnAllergensEdit.Text = "Edit";
                 this.txtAllergensCode.Enabled = false;
