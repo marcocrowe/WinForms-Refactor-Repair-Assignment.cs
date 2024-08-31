@@ -55,6 +55,7 @@ namespace Lab_3
             lvsearchRecipes = new System.Windows.Forms.ColumnHeader();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox3 = new System.Windows.Forms.GroupBox();
+            openAllergensPanelButton = new System.Windows.Forms.Button();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -322,17 +323,27 @@ namespace Lab_3
             groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            groupBox3.Size = new System.Drawing.Size(1607, 553);
+            groupBox3.Size = new System.Drawing.Size(1310, 553);
             groupBox3.TabIndex = 14;
             groupBox3.TabStop = false;
             groupBox3.Text = "Statistics";
-            groupBox3.Enter += groupBox3_Enter;
+            // 
+            // openAllergensPanelButton
+            // 
+            openAllergensPanelButton.Location = new System.Drawing.Point(1105, 68);
+            openAllergensPanelButton.Name = "openAllergensPanelButton";
+            openAllergensPanelButton.Size = new System.Drawing.Size(94, 29);
+            openAllergensPanelButton.TabIndex = 15;
+            openAllergensPanelButton.Text = "Open Allergens Panel";
+            openAllergensPanelButton.UseVisualStyleBackColor = true;
+            openAllergensPanelButton.Click += openAllergensPanelButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1826, 1102);
+            ClientSize = new System.Drawing.Size(1259, 1102);
+            Controls.Add(openAllergensPanelButton);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -375,6 +386,7 @@ namespace Lab_3
         private System.Windows.Forms.ColumnHeader lvsearchRecipes;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button openAllergensPanelButton;
     }
 }
 

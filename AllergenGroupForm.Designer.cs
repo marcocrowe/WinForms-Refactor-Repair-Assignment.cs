@@ -73,6 +73,7 @@ partial class AllergenGroupForm
         listView1.TabIndex = 0;
         listView1.UseCompatibleStateImageBehavior = false;
         listView1.View = System.Windows.Forms.View.Details;
+        listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
         // 
         // columnOne
         // 
@@ -110,6 +111,7 @@ partial class AllergenGroupForm
         btnAllergensAdd.TabIndex = 5;
         btnAllergensAdd.Text = "Add";
         btnAllergensAdd.UseVisualStyleBackColor = true;
+        btnAllergensAdd.Click += btnAllergensAdd_Click;
         // 
         // lblAlergensName
         // 
@@ -130,6 +132,7 @@ partial class AllergenGroupForm
         btnAllergensEdit.TabIndex = 6;
         btnAllergensEdit.Text = "Edit";
         btnAllergensEdit.UseVisualStyleBackColor = true;
+        btnAllergensEdit.Click += btnAllergensEdit_Click;
         // 
         // btnAllergensDelete
         // 
@@ -140,6 +143,7 @@ partial class AllergenGroupForm
         btnAllergensDelete.TabIndex = 7;
         btnAllergensDelete.Text = "Delete";
         btnAllergensDelete.UseVisualStyleBackColor = true;
+        btnAllergensDelete.Click += btnAllergensDelete_Click;
         // 
         // lblAllergensCode
         // 
@@ -159,6 +163,7 @@ partial class AllergenGroupForm
         Controls.Add(groupBox1);
         Name = "AllergenGroupForm";
         Text = "AllergenGroupForm";
+        Load += AllergenGroupForm_Load;
         groupBox1.ResumeLayout(false);
         groupBox1.PerformLayout();
         ResumeLayout(false);
