@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -163,7 +163,11 @@ namespace Lab_3
             }
             else
             {
-
+                if(String.IsNullOrWhiteSpace(allergensCodeTextBox.Text))
+                {
+                    allergensCodeTextBox.Text = $"000{ListAllergens.Count}";
+                    allergensNameTextBox.Text = $"Test Allergen {ListAllergens.Count}";
+                }
 
                 ListAllergens.Add(new Allergens(allergensCodeTextBox.Text, allergensNameTextBox.Text));
 
