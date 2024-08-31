@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -136,6 +136,18 @@ namespace Lab_3
 
             txtAllergensCode.Text = "";
             txtAllergensName.Text = "";
+        }
+
+        private static readonly bool Debug = false;
+
+        public static int Login(String username, String password)
+        {
+            if(Debug)
+                return 1; // Return the admin user
+
+            if(username == "admin" && password == "admin")
+                return 1;
+            return 0; // Return the normal user
         }
 
         private void btnAllergensAdd_Click(object sender, EventArgs e)
