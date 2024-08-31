@@ -55,8 +55,8 @@ namespace Lab_3
             lvsearchRecipes = new System.Windows.Forms.ColumnHeader();
             lblAllergensCode = new System.Windows.Forms.Label();
             lblAlergensName = new System.Windows.Forms.Label();
-            txtAllergensCode = new System.Windows.Forms.TextBox();
-            txtAllergensName = new System.Windows.Forms.TextBox();
+            allergensCodeTextBox = new System.Windows.Forms.TextBox();
+            allergensNameTextBox = new System.Windows.Forms.TextBox();
             btnAllergensAdd = new System.Windows.Forms.Button();
             btnAllergensEdit = new System.Windows.Forms.Button();
             btnAllergensDelete = new System.Windows.Forms.Button();
@@ -317,23 +317,23 @@ namespace Lab_3
             lblAlergensName.TabIndex = 2;
             lblAlergensName.Text = "Name :";
             // 
-            // txtAllergensCode
+            // allergensCodeTextBox
             // 
-            txtAllergensCode.Enabled = false;
-            txtAllergensCode.Location = new System.Drawing.Point(390, 23);
-            txtAllergensCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtAllergensCode.Name = "txtAllergensCode";
-            txtAllergensCode.Size = new System.Drawing.Size(187, 31);
-            txtAllergensCode.TabIndex = 3;
+            allergensCodeTextBox.Enabled = false;
+            allergensCodeTextBox.Location = new System.Drawing.Point(390, 23);
+            allergensCodeTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            allergensCodeTextBox.Name = "allergensCodeTextBox";
+            allergensCodeTextBox.Size = new System.Drawing.Size(187, 31);
+            allergensCodeTextBox.TabIndex = 3;
             // 
-            // txtAllergensName
+            // allergensNameTextBox
             // 
-            txtAllergensName.Enabled = false;
-            txtAllergensName.Location = new System.Drawing.Point(390, 90);
-            txtAllergensName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtAllergensName.Name = "txtAllergensName";
-            txtAllergensName.Size = new System.Drawing.Size(187, 31);
-            txtAllergensName.TabIndex = 4;
+            allergensNameTextBox.Enabled = false;
+            allergensNameTextBox.Location = new System.Drawing.Point(390, 90);
+            allergensNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            allergensNameTextBox.Name = "allergensNameTextBox";
+            allergensNameTextBox.Size = new System.Drawing.Size(187, 31);
+            allergensNameTextBox.TabIndex = 4;
             // 
             // btnAllergensAdd
             // 
@@ -394,8 +394,8 @@ namespace Lab_3
             // groupBox1
             // 
             groupBox1.Controls.Add(listView1);
-            groupBox1.Controls.Add(txtAllergensCode);
-            groupBox1.Controls.Add(txtAllergensName);
+            groupBox1.Controls.Add(allergensCodeTextBox);
+            groupBox1.Controls.Add(allergensNameTextBox);
             groupBox1.Controls.Add(btnAllergensAdd);
             groupBox1.Controls.Add(lblAlergensName);
             groupBox1.Controls.Add(btnAllergensEdit);
@@ -503,8 +503,8 @@ namespace Lab_3
         private System.Windows.Forms.ColumnHeader lvsearchRecipes;
         private System.Windows.Forms.Label lblAllergensCode;
         private System.Windows.Forms.Label lblAlergensName;
-        private System.Windows.Forms.TextBox txtAllergensCode;
-        private System.Windows.Forms.TextBox txtAllergensName;
+        private System.Windows.Forms.TextBox allergensCodeTextBox;
+        private System.Windows.Forms.TextBox allergensNameTextBox;
         private System.Windows.Forms.Button btnAllergensAdd;
         private System.Windows.Forms.Button btnAllergensEdit;
         private System.Windows.Forms.Button btnAllergensDelete;

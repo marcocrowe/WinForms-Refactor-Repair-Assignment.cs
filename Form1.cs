@@ -95,8 +95,8 @@ namespace Lab_3
         {
             foreach(ListViewItem x in listView1.SelectedItems)
             {
-                this.txtAllergensCode.Text = x.SubItems[0].Text;
-                this.txtAllergensName.Text = x.SubItems[1].Text;
+                this.allergensCodeTextBox.Text = x.SubItems[0].Text;
+                this.allergensNameTextBox.Text = x.SubItems[1].Text;
             }
         }
 
@@ -105,23 +105,23 @@ namespace Lab_3
             if(btnAllergensEdit.Text == "Edit")
             {
                 btnAllergensEdit.Text = "Save";
-                this.txtAllergensCode.Enabled = true;
-                this.txtAllergensName.Enabled = true;
+                this.allergensCodeTextBox.Enabled = true;
+                this.allergensNameTextBox.Enabled = true;
             }
             else
             {
                 foreach(ListViewItem x in listView1.SelectedItems)
                 {
                     ListAllergens.RemoveAt(x.Index);
-                    ListAllergens.Add(new Allergens(this.txtAllergensCode.Text, this.txtAllergensCode.Text));
+                    ListAllergens.Add(new Allergens(this.allergensCodeTextBox.Text, this.allergensCodeTextBox.Text));
 
                     //TODO:Task 1 - Bug
-                    x.SubItems[0].Text = this.txtAllergensCode.Text;
-                    x.SubItems[1].Text = this.txtAllergensName.Text;
+                    x.SubItems[0].Text = this.allergensCodeTextBox.Text;
+                    x.SubItems[1].Text = this.allergensNameTextBox.Text;
                 }
                 btnAllergensEdit.Text = "Edit";
-                this.txtAllergensCode.Enabled = false;
-                this.txtAllergensName.Enabled = false;
+                this.allergensCodeTextBox.Enabled = false;
+                this.allergensNameTextBox.Enabled = false;
             }
         }
 
@@ -134,8 +134,8 @@ namespace Lab_3
                 listView1.Items.RemoveAt(x.Index);
             }
 
-            txtAllergensCode.Text = "";
-            txtAllergensName.Text = "";
+            allergensCodeTextBox.Text = "";
+            allergensNameTextBox.Text = "";
         }
 
         private static readonly bool Debug = false;
@@ -156,23 +156,25 @@ namespace Lab_3
             if(btnAllergensAdd.Text == "Add")
             {
                 btnAllergensAdd.Text = "Save";
-                this.txtAllergensCode.Text = "";
-                this.txtAllergensName.Text = "";
-                this.txtAllergensCode.Enabled = true;
-                this.txtAllergensName.Enabled = true;
+                allergensCodeTextBox.Text = "";
+                allergensNameTextBox.Text = "";
+                allergensCodeTextBox.Enabled = true;
+                allergensNameTextBox.Enabled = true;
             }
             else
             {
-                ListAllergens.Add(new Allergens(this.txtAllergensCode.Text, this.txtAllergensName.Text));
 
-                string[] row = [txtAllergensCode.Text, txtAllergensName.Text];
+
+                ListAllergens.Add(new Allergens(allergensCodeTextBox.Text, allergensNameTextBox.Text));
+
+                string[] row = [allergensCodeTextBox.Text, allergensNameTextBox.Text];
                 var listViewItem = new ListViewItem(row);
 
                 this.listView1.Items.Add(listViewItem);
 
                 btnAllergensAdd.Text = "Add";
-                this.txtAllergensCode.Enabled = false;
-                this.txtAllergensName.Enabled = false;
+                this.allergensCodeTextBox.Enabled = false;
+                this.allergensNameTextBox.Enabled = false;
             }
         }
 
