@@ -43,7 +43,6 @@ public partial class AllergenGroupForm : Form
     }
     private void btnAllergensAdd_Click(object sender, EventArgs e)
     {
-        //TODO:Task 4
         if (btnAllergensAdd.Text == "Add")
         {
             btnAllergensAdd.Text = "Save";

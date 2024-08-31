@@ -34,7 +34,6 @@ namespace Lab_3
             btnRecipeAdd = new System.Windows.Forms.Button();
             lblRecipeAllergens = new System.Windows.Forms.Label();
             lblRecipeName = new System.Windows.Forms.Label();
-            txtRecipeAllergens = new System.Windows.Forms.TextBox();
             txtRecipeName = new System.Windows.Forms.TextBox();
             txtRecipeCode = new System.Windows.Forms.TextBox();
             lblRecipeCode = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@ namespace Lab_3
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox3 = new System.Windows.Forms.GroupBox();
             openAllergensPanelButton = new System.Windows.Forms.Button();
+            recipeAllergensComboBox = new System.Windows.Forms.ComboBox();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -114,15 +114,6 @@ namespace Lab_3
             lblRecipeName.Size = new System.Drawing.Size(71, 25);
             lblRecipeName.TabIndex = 5;
             lblRecipeName.Text = "Name :";
-            // 
-            // txtRecipeAllergens
-            // 
-            txtRecipeAllergens.Enabled = false;
-            txtRecipeAllergens.Location = new System.Drawing.Point(697, 198);
-            txtRecipeAllergens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtRecipeAllergens.Name = "txtRecipeAllergens";
-            txtRecipeAllergens.Size = new System.Drawing.Size(293, 31);
-            txtRecipeAllergens.TabIndex = 4;
             // 
             // txtRecipeName
             // 
@@ -288,10 +279,10 @@ namespace Lab_3
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(recipeAllergensComboBox);
             groupBox2.Controls.Add(listView2);
             groupBox2.Controls.Add(lblRecipeCode);
             groupBox2.Controls.Add(lblRecipeName);
-            groupBox2.Controls.Add(txtRecipeAllergens);
             groupBox2.Controls.Add(lblRecipeAllergens);
             groupBox2.Controls.Add(txtRecipeName);
             groupBox2.Controls.Add(btnRecipeAdd);
@@ -338,6 +329,14 @@ namespace Lab_3
             openAllergensPanelButton.UseVisualStyleBackColor = true;
             openAllergensPanelButton.Click += openAllergensPanelButton_Click;
             // 
+            // recipeAllergensComboBox
+            // 
+            recipeAllergensComboBox.FormattingEnabled = true;
+            recipeAllergensComboBox.Location = new System.Drawing.Point(697, 195);
+            recipeAllergensComboBox.Name = "recipeAllergensComboBox";
+            recipeAllergensComboBox.Size = new System.Drawing.Size(293, 33);
+            recipeAllergensComboBox.TabIndex = 10;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -364,8 +363,6 @@ namespace Lab_3
         private System.Windows.Forms.Button btnRecipeAdd;
         private System.Windows.Forms.Label lblRecipeAllergens;
         private System.Windows.Forms.Label lblRecipeName;
-        //TODO: Task 5 Change to a drop-down list control containing the allergens names to the allergens field
-        private System.Windows.Forms.TextBox txtRecipeAllergens;
         private System.Windows.Forms.TextBox txtRecipeName;
         private System.Windows.Forms.TextBox txtRecipeCode;
         private System.Windows.Forms.Label lblRecipeCode;
@@ -387,6 +384,7 @@ namespace Lab_3
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button openAllergensPanelButton;
+        private System.Windows.Forms.ComboBox recipeAllergensComboBox;
     }
 }
 

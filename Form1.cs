@@ -24,9 +24,7 @@ namespace Lab_3
 
         public Form1()
         {
-
             InitializeComponent();
-
         }
 
         public void SetupData()
@@ -61,6 +59,16 @@ namespace Lab_3
             recipeCollection.Add(r4); recipeCollection.Add(r5); recipeCollection.Add(r6);
             recipeCollection.Add(r7);
             SetupDataForRecipeTab();
+            PopulateAllergenComboBox();
+        }
+
+        private void PopulateAllergenComboBox()
+        {
+            recipeAllergensComboBox.Items.Clear();
+            foreach(var allergen in ListAllergens)
+            {
+                recipeAllergensComboBox.Items.Add(allergen.Name);
+            }
         }
 
 
@@ -105,27 +113,30 @@ namespace Lab_3
             if(btnRecipeEdit.Text == "Edit")
             {
                 btnRecipeEdit.Text = "Save";
-                this.txtRecipeCode.Enabled = true;
-                this.txtRecipeName.Enabled = true;
-                this.txtRecipeAllergens.Enabled = true;
+                txtRecipeCode.Enabled = true;
+                txtRecipeName.Enabled = true;
+                recipeAllergensComboBox.Enabled = true;
             }
             else
             {
                 foreach(ListViewItem x in listView2.SelectedItems)
                 {
                     recipeCollection.RemoveAt(x.Index);
-                    List<string> allergies = this.txtRecipeAllergens.Text.Split(',').ToList();
+                    List<string> allergies = new List<string>();
+                    foreach(var item in recipeAllergensComboBox.Items)
+                    {
+                        allergies.Add(item.ToString());
+                    }
                     recipeCollection.Add(new Recipe(this.txtRecipeCode.Text, this.txtRecipeName.Text, allergies));
 
                     x.SubItems[0].Text = this.txtRecipeCode.Text;
                     x.SubItems[1].Text = this.txtRecipeName.Text;
-                    x.SubItems[2].Text = this.txtRecipeAllergens.Text;
-
+                    x.SubItems[2].Text = string.Join(",", allergies);
                 }
                 btnRecipeEdit.Text = "Edit";
-                this.txtRecipeCode.Enabled = false;
-                this.txtRecipeName.Enabled = false;
-                this.txtRecipeAllergens.Enabled = false;
+                txtRecipeCode.Enabled = false;
+                txtRecipeName.Enabled = false;
+                recipeAllergensComboBox.Enabled = false;
             }
         }
 
@@ -133,9 +144,9 @@ namespace Lab_3
         {
             foreach(ListViewItem x in listView2.SelectedItems)
             {
-                this.txtRecipeCode.Text = x.SubItems[0].Text;
-                this.txtRecipeName.Text = x.SubItems[1].Text;
-                this.txtRecipeAllergens.Text = x.SubItems[2].Text;
+                txtRecipeCode.Text = x.SubItems[0].Text;
+                txtRecipeName.Text = x.SubItems[1].Text;
+                recipeAllergensComboBox.SelectedItem = x.SubItems[2].Text;
             }
         }
 
@@ -149,7 +160,7 @@ namespace Lab_3
 
             txtRecipeCode.Text = "";
             txtRecipeName.Text = "";
-            txtRecipeAllergens.Text = "";
+            recipeAllergensComboBox.SelectedIndex = -1;
         }
 
         private void btnRecipeAdd_Click(object sender, EventArgs e)
@@ -160,17 +171,17 @@ namespace Lab_3
                 this.txtRecipeCode.Text = "";
                 this.txtRecipeName.Text = "";
                 //Task 5 : Replace with DropDownList
-                this.txtRecipeAllergens.Text = "";
+                this.recipeAllergensComboBox.Text = "";
                 this.txtRecipeCode.Enabled = true;
                 this.txtRecipeName.Enabled = true;
-                this.txtRecipeAllergens.Enabled = true;
+                this.recipeAllergensComboBox.Enabled = true;
             }
             else
             {
-                List<string> allergies = this.txtRecipeAllergens.Text.Split([',']).ToList();
+                List<string> allergies = this.recipeAllergensComboBox.Text.Split([',']).ToList();
                 recipeCollection.Add(new Recipe(this.txtRecipeCode.Text, this.txtRecipeName.Text, allergies));
 
-                string[] row = [txtRecipeCode.Text, this.txtRecipeName.Text, this.txtRecipeAllergens.Text];
+                string[] row = [txtRecipeCode.Text, this.txtRecipeName.Text, this.recipeAllergensComboBox.Text];
                 var listViewItem = new ListViewItem(row);
 
                 listView2.Items.Add(listViewItem);
@@ -178,7 +189,7 @@ namespace Lab_3
                 btnRecipeAdd.Text = "Add";
                 txtRecipeCode.Enabled = false;
                 txtRecipeName.Enabled = false;
-                txtRecipeAllergens.Enabled = false;
+                recipeAllergensComboBox.Enabled = false;
             }
         }
 
@@ -272,6 +283,11 @@ namespace Lab_3
         {
             AllergenGroupForm allergenGroupForm = new AllergenGroupForm(this);
             allergenGroupForm.Show();
+        }
+
+        private void txtRecipeAllergens_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
